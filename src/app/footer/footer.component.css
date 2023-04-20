@@ -1,0 +1,29 @@
+.general{
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  color: white;
+}
+
+.accesos{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  margin: 10px;
+  width: 3.5%;
+  color: white;
+}
+
+label, a{
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 13pt;
+}
+
+h3{
+  margin-bottom: 15px;
+}

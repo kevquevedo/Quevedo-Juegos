@@ -1,0 +1,34 @@
+<header></header>
+<main>
+  <section>
+    <!-- ENCABEZADO -->
+    <div class="encabezado">
+      <h2>QuevedoJuegos</h2>
+      <label>Inicia Sesión</label>
+      <img src="../../assets/login.png" alt="login">
+    </div>
+    <!-- FORMULARIO -->
+    <div class="formulario " >
+      <form class="form-floating " [formGroup]="formulario">
+        <input type="email" class="form-control" id="floatingInputName" formControlName="email">
+        <label for="floatingInputName">Email</label>
+      </form>
+
+      <form class="form-floating " [formGroup]="formulario">
+        <input type="password" class="form-control" id="floatingInputPass" formControlName="clave">
+        <label for="floatingInputPass">Contraseña</label>
+      </form>
+    </div>
+
+    <p *ngIf="mensajeOk" class="alert alert-success">Login exitoso!</p>
+    <p *ngIf="mensajeError" class="alert alert-danger">El usuario/clave son incorrectos!</p>
+
+    <!-- PIE -->
+    <div class="pie ">
+      <button type="button" class="btn btn-primary" (click)="validarUsuario(formulario)">Ingresar</button>
+      <label>¿No posees una cuenta? <a href="registro">Regístrate</a></label>
+    </div>
+  </section>
+
+</main>
+<footer> </footer>
