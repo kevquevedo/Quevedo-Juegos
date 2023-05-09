@@ -1,43 +1,47 @@
-<header></header>
-<main>
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<main *ngIf="!loading">
   <section></section>
   <section>
     <h1>QuevedoJuegos</h1>
-    <div>
-      <!--NOMBRE-->
-      <form class="form-floating">
-        <input type="text" class="form-control" id="floatingNombre">
-        <label for="floatingNombre">Nombre</label>
-      </form>
+    <!-- FORMULARIO -->
+    <form [formGroup]="form" (ngSubmit)="crearUsuario()" class="formulario container-fluid">
 
-      <!--APELLIDO-->
-      <form class="form-floating">
-        <input type="text" class="form-control" id="floatingApellido">
-        <label for="floatingApellido">Apellido</label>
-      </form>
-    </div>
+      <div>
+        <div class="form-floating form-control-group p-2" >
+          <input type="text" class="form-control" id="nombre" formControlName="nombre">
+          <label class="form-label" for="nombre">Nombre</label>
+        </div>
 
-    <!--EMAIL-->
-    <form class="form-floating">
-      <input type="email" class="form-control" id="floatingEmail">
-      <label for="floatingEmail">Email</label>
+        <div class="form-floating form-control-group p-2" >
+          <input type="text" class="form-control" id="apellido" formControlName="apellido">
+          <label class="form-label" for="apellido">Apellido</label>
+        </div>
+      </div>
+
+      <div class="datos">
+        <div class="form-floating form-control-group p-2" >
+          <input type="email" class="form-control" id="mail" formControlName="mail">
+          <label class="form-label" for="mail">Email</label>
+        </div>
+
+        <div class="form-floating form-control-group p-2" >
+          <input type="password" class="form-control" id="clave" formControlName="clave">
+          <label class="form-label" for="clave">Contraseña</label>
+        </div>
+
+        <div class="form-floating form-control-group p-2"  >
+          <input type="password" class="form-control" id="reingresoClave" formControlName="reingresoClave">
+          <label class="form-label" for="reingresoClave">Reingrese Contraseña</label>
+        </div>
+      </div><br>
+
+      <small *ngIf="mensajeError" class="text-danger">{{mensajeError}}</small> <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+      </div>
+
     </form>
-
-    <!--CONTRASEÑA-->
-    <form class="form-floating">
-      <input type="email" class="form-control" id="floatingPass1" >
-      <label for="floatingPass1">Contraseña</label>
-    </form>
-
-    <!--REINGRESO CONTRASEÑA-->
-    <form class="form-floating">
-      <input type="email" class="form-control" id="floatingPass2">
-      <label for="floatingPass2">Reingrese contraseña</label>
-    </form>
-
-    <button class="btn btn-primary" type="submit">Registrarse</button>
-
   </section>
-
 </main>
-<footer><p>© 2023 - Desarrollado por <i>Kevin Quevedo Dev</i></p></footer>

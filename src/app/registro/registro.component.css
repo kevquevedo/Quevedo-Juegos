@@ -8,24 +8,6 @@ main{
   border: 1px solid grey;
 }
 
-header, footer{
-  width: 100%;
-  height: 10vh;
-  background-color: grey;
-}
-
-header{
-  box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
-}
-
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
-  font-weight: bold;
-}
-
 form, button{
   margin: 10px;
   width: 100%;
@@ -55,4 +37,28 @@ h1{
   font-family: 'Tilt Prism', cursive;
   font-weight: 400;
   font-size: 30pt;
+}
+
+.datos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+small{
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.loader{
+  width: 400px;
+  height: 400px;
 }

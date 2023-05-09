@@ -1,34 +1,54 @@
-<header></header>
-<main>
-  <section>
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<main *ngIf="!loading">
+  <section >
     <!-- ENCABEZADO -->
     <div class="encabezado">
       <h2>QuevedoJuegos</h2>
       <label>Inicia Sesión</label>
       <img src="../../assets/login.png" alt="login">
     </div>
-    <!-- FORMULARIO -->
-    <div class="formulario " >
-      <form class="form-floating " [formGroup]="formulario">
-        <input type="email" class="form-control" id="floatingInputName" formControlName="email">
-        <label for="floatingInputName">Email</label>
-      </form>
 
-      <form class="form-floating " [formGroup]="formulario">
-        <input type="password" class="form-control" id="floatingInputPass" formControlName="clave">
-        <label for="floatingInputPass">Contraseña</label>
-      </form>
+    <!-- FORMULARIO -->
+
+    <form [formGroup]="form" (ngSubmit)="loguearUsuario()" class="formulario container-fluid">
+
+      <div class="row">
+        <div class="form-floating form-control-group" >
+          <input type="email" class="form-control" id="mail" formControlName="mail">
+          <label class="form-label" for="mail">Email</label>
+        </div>
+
+        <div class="form-floating form-control-group" >
+          <input type="password" class="form-control" id="clave" formControlName="clave">
+          <label class="form-label" for="clave">Contraseña</label>
+        </div>
+      </div><br>
+
+      <div class="d-flex justify-content-center" *ngIf="spinner">
+        <img class="spinner" src="../../assets/Spinner.gif" alt="">
+      </div>
+      <small *ngIf="mensajeError" class="text-danger">{{mensajeError}}</small> <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </div>
+
+    </form>
+
+    <p>Ingresos Rápidos</p>
+    <div class="d-flex">
+      <div class="row">
+        <button class="arapido col btn btn-info" type="button" (click)="log('Kevin')">Kevin Quevedo</button>
+        <button class="arapido col btn btn-info" type="button" (click)="log('Augusto')">Augusto Fernandez</button>
+        <button class="arapido col btn btn-info" type="button" (click)="log('Guido')">Guido Gutierrez</button>
+      </div>
     </div>
 
-    <p *ngIf="mensajeOk" class="alert alert-success">Login exitoso!</p>
-    <p *ngIf="mensajeError" class="alert alert-danger">El usuario/clave son incorrectos!</p>
-
     <!-- PIE -->
-    <div class="pie ">
-      <button type="button" class="btn btn-primary" (click)="validarUsuario(formulario)">Ingresar</button>
-      <label>¿No posees una cuenta? <a href="registro">Regístrate</a></label>
+    <div class="pie">
+      <label>¿No posees una cuenta?<a routerLink="../registro"> Regístrate</a></label>
     </div>
   </section>
 
 </main>
-<footer> </footer>
