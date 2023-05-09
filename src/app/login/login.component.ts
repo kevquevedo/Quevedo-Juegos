@@ -41,7 +41,9 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subUsuarios.unsubscribe();
+    if(this.subUsuarios != undefined){
+      this.subUsuarios.unsubscribe();
+    }
   }
 
   get mail(){
@@ -136,4 +138,5 @@ export class LoginComponent implements OnInit, OnDestroy {
   ocultarMensaje(){
     setTimeout(() =>{ this.mensajeError = undefined },3000)
   }
+
 }
