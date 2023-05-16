@@ -1,0 +1,30 @@
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<main *ngIf="!loading">
+  <div class="chat">
+
+    <div class="chat-historial">
+      <div *ngFor="let chat of historialChat" class="mb-3">
+
+        <div *ngIf="chat.email != this.email">
+          <div class="remitente">{{chat.nombre}} {{chat.apellido}} - {{chat.hora}}</div>
+          <div class="text">{{chat.mensaje}}</div>
+        </div>
+
+        <div *ngIf="chat.email == this.email" class="centrado">
+          <div class="remitente mensajePropio">{{chat.nombre}} {{chat.apellido}} - {{chat.hora}}</div>
+          <div class="text mensajePropio">{{chat.mensaje}}</div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input [(ngModel)]="mensaje" type="text" placeholder="Escribe tu mensaje aquí..." >
+      <button type="button" class="btn btn-success" (click)="enviarMensaje()">Enviar</button>
+    </div>
+
+  </div>
+</main>

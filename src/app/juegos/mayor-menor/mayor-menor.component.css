@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+button{
+  width: 40%;
+  margin: 20px;
+}
+
+.titulo{
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 14pt;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.loader{
+  width: 400px;
+  height: 400px;
+}

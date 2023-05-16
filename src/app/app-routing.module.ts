@@ -6,6 +6,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
 import { QuienSoyComponent } from './quien-soy/quien-soy.component';
+import { LogueadoGuard } from './guards/logueado.guard';
 
 const routes: Routes = [
 
@@ -16,7 +17,8 @@ const routes: Routes = [
       {path:'inicio', redirectTo: '/home', pathMatch:'full'},
       {path:'quien-soy', component: QuienSoyComponent},
       {path:'juegos', loadChildren: () => import('./juegos/juegos.module').then((m) => m.JuegosModule)},
-      {path:'login', component: LoginComponent},
+      {path:'chat', loadChildren: () => import('./chat/chat.module').then((m) => m.ChatModule), canActivate:[LogueadoGuard]},
+      {path:'login', component: LoginComponent,},
       {path:'registro', component:RegistroComponent}
     ]
   },

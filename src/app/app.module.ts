@@ -16,6 +16,9 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuienSoyComponent } from './quien-soy/quien-soy.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +33,14 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     QuienSoyComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
   ],
   providers: [],

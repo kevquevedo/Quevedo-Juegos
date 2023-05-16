@@ -29,13 +29,8 @@ export class NavbarComponent implements OnInit, OnDestroy{
   }
 
   cerrarSesion(){
-    this.auth.signOut()
-    .then( () => {
-      this.usuarioRegistrado = undefined;
-    })
-    .catch( res => {
-      console.log(res)
-    })
+    this.uServ.logOut();
+    this.usuarioRegistrado = undefined;
   }
 
 

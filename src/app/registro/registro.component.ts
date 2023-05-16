@@ -61,7 +61,7 @@ export class RegistroComponent implements OnInit {
     if(this.evaluarErrorInputs()){
       createUserWithEmailAndPassword(this.auth, this.mail?.value, this.clave?.value)
       .then( respuesta => {
-        this.uServ.actualizarUsuarios(this.nombre?.value, this.apellido?.value, this.mail?.value, this.clave?.value)
+        this.uServ.actualizarUsuarios(this.nombre?.value, this.apellido?.value, this.mail?.value, this.clave?.value);
         this.uServ.actualizarLogUsuarios(this.mail?.value);
         this.uServ.loguearUsuario(this.mail?.value);
         this.router.navigateByUrl('');

@@ -35,9 +35,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       clave: new FormControl('', Validators.minLength(6)),
     });
 
-    setTimeout(() =>{
-      this.loading= false;
-    },1000)
+    setTimeout(() =>{ this.loading= false; }, 1000)
   }
 
   ngOnDestroy(): void {

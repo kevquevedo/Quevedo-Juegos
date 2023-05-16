@@ -1,0 +1,107 @@
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<div class="container bg-light vw-100" *ngIf="!loading">
+  <div class="row justify-content-center p-3">
+    <div class="col text-center border-bottom fs-1 p-3 fw-bolder titulo">
+      Juego del Ahorcado
+    </div>
+
+    <div class="menu">
+      <div class="errores">
+        <small class="fw-semibold">Cantidad máxima de errores: 4</small>
+        <small class="fw-semibold">Cantidad de errores realizados: {{cantErrores}}</small><br>
+      </div>
+      <form [formGroup]="form" class="input" >
+        <div class="menu mb-3">
+          <button type="button" class="btn btn-warning" (click)="arriesgarPalabra()">Arriesgar Palabra</button>
+          <input type="text" class="form-control" id="palabraArriesgada" formControlName="palabraArriesgada">
+        </div>
+      </form>
+
+    </div>
+
+    <div class="p-3 bg-info row text-center">
+      <div class="col-4">
+        <img src="../../../assets/ahorcado/{{cantErrores}}_fallos.png" width="200" height="200" alt="">
+      </div>
+      <div class="col-8 palabra">
+        <label *ngFor="let letra of palabraSeleccionada" >
+          <label class="w-75 fs-4 fw-semibold letras" *ngIf="letra.visible">{{letra.valor | uppercase}}</label>
+          <label class="w-75 border-bottom border-dark letras" *ngIf="!letra.visible"></label>
+        </label>
+      </div>
+    </div>
+
+    <div class="teclado p-3" >
+      <div class="teclado-linea">
+        <div class="letra" data-char="Q" (click)="letraSeleccionada('Q')">Q</div>
+        <div class="letra" data-char="W" (click)="letraSeleccionada('W')">W</div>
+        <div class="letra" data-char="E" (click)="letraSeleccionada('E')">E</div>
+        <div class="letra" data-char="R" (click)="letraSeleccionada('R')">R</div>
+        <div class="letra" data-char="T" (click)="letraSeleccionada('T')">T</div>
+        <div class="letra" data-char="Y" (click)="letraSeleccionada('Y')">Y</div>
+        <div class="letra" data-char="U" (click)="letraSeleccionada('U')">U</div>
+        <div class="letra" data-char="I" (click)="letraSeleccionada('I')">I</div>
+        <div class="letra" data-char="O" (click)="letraSeleccionada('O')">O</div>
+        <div class="letra" data-char="P" (click)="letraSeleccionada('P')">P</div>
+      </div>
+      <div class="teclado-linea">
+        <div class="letra" data-char="A" (click)="letraSeleccionada('A')">A</div>
+        <div class="letra" data-char="S" (click)="letraSeleccionada('S')">S</div>
+        <div class="letra" data-char="D" (click)="letraSeleccionada('D')">D</div>
+        <div class="letra" data-char="F" (click)="letraSeleccionada('F')">F</div>
+        <div class="letra" data-char="G" (click)="letraSeleccionada('G')">G</div>
+        <div class="letra" data-char="H" (click)="letraSeleccionada('H')">H</div>
+        <div class="letra" data-char="J" (click)="letraSeleccionada('J')">J</div>
+        <div class="letra" data-char="K" (click)="letraSeleccionada('K')">K</div>
+        <div class="letra" data-char="L" (click)="letraSeleccionada('L')">L</div>
+        <div class="letra" data-char="Ñ" (click)="letraSeleccionada('Ñ')">Ñ</div>
+      </div>
+      <div class="teclado-linea">
+        <div class="letra" data-char="Z" (click)="letraSeleccionada('Z')">Z</div>
+        <div class="letra" data-char="X" (click)="letraSeleccionada('X')">X</div>
+        <div class="letra" data-char="C" (click)="letraSeleccionada('C')">C</div>
+        <div class="letra" data-char="V" (click)="letraSeleccionada('V')">V</div>
+        <div class="letra" data-char="B" (click)="letraSeleccionada('B')">B</div>
+        <div class="letra" data-char="N" (click)="letraSeleccionada('N')">N</div>
+        <div class="letra" data-char="M" (click)="letraSeleccionada('M')">M</div>
+      </div>
+    </div>
+
+    <div class="col text-center border-top fs-4 p-3">
+      <button class="btn btn-info" (click)="elegirPalabra()">Iniciar Juego</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal Perdiste-->
+<div class="modal fade" id="mensajePerdisteModal" tabindex="-1" aria-labelledby="mensajePerdisteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-bg-danger">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mensajePerdisteModalLabel">Mensaje</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Perdiste! <br> Intentalo de nuevo!
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ganaste-->
+<div class="modal fade" id="mensajeGanasteModal" tabindex="-1" aria-labelledby="mensajeGanasteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-bg-success">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mensajeGanasteModalLabel">Mensaje</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ganaste! <br> Bien hecho!
+      </div>
+    </div>
+  </div>
+</div>
