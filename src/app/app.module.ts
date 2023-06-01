@@ -14,7 +14,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { QuienSoyComponent } from './quien-soy/quien-soy.component';
+import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';

@@ -1,0 +1,99 @@
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<main class="container-fluid cuerpo" *ngIf="!loading">
+
+  <div class="banner p-4 p-md-5 mb-4 rounded text-bg-dark shadow w-75">
+    <div class="col-md-6 px-0 text-end">
+      <h1 class="display-5 fst-italic mb-4">Sobre mí</h1>
+      <p class="lead px-auto">Soy estudiante de la Tecnitura Superior en Programación en la Universidad Tecnologica Nacional.</p>
+      <p>Amplié mis conocimientos realizando cursos y certificandome</p>
+      <p> en instituciones como <a href="https://www.coderhouse.com/" target="_blank">CoderHouse</a> y <a href="https://www.educacionit.com/" target="_blank">Educación IT.</a></p>
+      <br><p>Actualmente me desempeño como Desarrollador Cobol en Prisma Medios de Pago, </p>
+      <p>especializado en el procesamiento de emisión de tarjetas de débito, crédito y prepagas, </p>
+      <p>para las marcas Visa, Mastercard y American Express.</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+      <div class="row border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative  datos">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Datos Personales</strong><br>
+          <h4 class="mb-0">Nombres y Apellidos</h4>
+          <p class="m-3 text-body-secondary">Kevin Axel Quevedo</p>
+          <h4 class="mb-0">DNI</h4>
+          <p class="m-3 text-body-secondary">38.585.829</p>
+          <h4 class="mb-0">Estado Civil</h4>
+          <p class="m-3 text-body-secondary">Casado</p>
+          <h4 class="mb-0">Edad</h4>
+          <p class="m-3 text-body-secondary">28 Años</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="row border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative  datos">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Juego Propio</strong>
+          <h4 class="mb-0">Generala Obligada</h4>
+          <div class="mb-3 text-body-secondary">
+            La Generala Obligada es un juego de azar. Se juega con 5 dados.<br>
+            Cada jugador realiza un tiro para cada jugada, las cuales se explicaran mas adelante, y se determina que puntaje obtiene sobre cada una de ellas. <br><br>
+            Las jugadas con las siguientes:
+            <section>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 1</h5>
+                <p>Por cada 1 que se saque se suma el valor del dado, en este caso, 1 punto por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 2</h5>
+                <p>Por cada 2 que se saque se suma el valor del dado, en este caso, 2 puntos por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 3</h5>
+                <p>Por cada 3 que se saque se suma el valor del dado, en este caso, 3 puntos por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 4</h5>
+                <p>Por cada 4 que se saque se suma el valor del dado, en este caso, 4 puntos por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 5</h5>
+                <p>Por cada 5 que se saque se suma el valor del dado, en este caso, 5 puntos por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Jugada de 6</h5>
+                <p>Por cada 6 que se saque se suma el valor del dado, en este caso, 6 puntos por cada dado.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Escalera</h5>
+                <p>Si se sacan los 5 dados de menor a mayor, el jugador obtiene 20 puntos.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Full</h5>
+                <p>El jugador que saque los 5 dados de menor a mayor, obtiene 20 puntos.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Poker</h5>
+                <p>Si se sacan 4 dados iguales, el jugador obtiene 40 puntos.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Generala</h5>
+                <p>Si se sacan 5 dados iguales, el jugador obtiene 50 puntos.</p>
+              </div>
+              <div class="intrucciones">
+                <h5 class="fw-bold">Generala Doble</h5>
+                <p>Si vuelve a sacar 5 dados iguales, el jugador obtiene 100 puntos. <br>
+                  Si para esta ocasión, el jugador no obtuvo la generala en la tirada anterior, por mas que saque generala en esta tirada no suma puntos.
+                </p></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>

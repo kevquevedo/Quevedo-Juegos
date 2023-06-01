@@ -4,10 +4,10 @@ a{ text-decoration: none;}
 
 .banner{
   background: linear-gradient(to right, transparent, 20%, #212529, 28%, #212529),
-  url(../../assets/fotoperfil.PNG);
+  url(../../../assets/fotoperfil.PNG);
   background-repeat: no-repeat;
   object-fit: fill;
-  height: 50vh;
+  height: 100%;
 }
 
 .cuerpo{
@@ -28,6 +28,20 @@ a{ text-decoration: none;}
 .loader{
   width: 400px;
   height: 400px;
+}
+
+.datos{
+  height: 100%;
+}
+
+.intrucciones{
+  display: flex;
+  flex-direction: column;
+}
+
+p{
+  margin-left: 5px;
+  margin-bottom: 2px;
 }
 
 

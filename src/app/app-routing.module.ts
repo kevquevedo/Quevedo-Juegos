@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './registro/registro.component';
-import { QuienSoyComponent } from './quien-soy/quien-soy.component';
+import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { LogueadoGuard } from './guards/logueado.guard';
 
 const routes: Routes = [

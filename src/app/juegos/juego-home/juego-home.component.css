@@ -15,7 +15,7 @@ h5{
 }
 
 h5{
-  font-size: 30pt;
+  font-size: 25pt;
 }
 
 a{
@@ -39,22 +39,21 @@ div img{
   width: 400px;
   height: 400px;
 }
-
 .seleccionJuegos{
   display: flex;
   justify-content: center;
   margin: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .card{
-  margin: 25px;
-  width: 50%;
   display: flex;
   align-items: center;
   border-radius: 5%;
   padding: 5px;
+  height: 100%;
 }
+
 
 
 

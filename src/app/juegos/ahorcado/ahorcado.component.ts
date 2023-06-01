@@ -72,7 +72,6 @@ export class AhorcadoComponent implements OnInit {
     })
   }
 
-  //Ingresa la letra elegida por el usuario y la busca en la palabra
   letraSeleccionada(letra : any){
     let contiene = false;
     this.palabraSeleccionada.forEach(item => {

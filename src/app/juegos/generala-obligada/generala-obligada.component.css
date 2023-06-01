@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.loader{
+  width: 400px;
+  height: 400px;
+}
+
+.titulo{
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 14pt;
+}
+
+.boton{
+  margin-right: 10px;
+  width: 50%;
+  height: 20vh;
+}
+
+.botonTirar{
+  margin: 20px;
+  width: 50%;
+  height: 5vh;
+}
+
+.cuerpo{
+  height: 50vh;
+}
+
+.linea{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 10px;
+  height: 30%;
+
+}
+
+.dados{
+  display: flex;
+  flex-direction: row;
+}
+
+img{
+  width: 30%;
+  margin: 5px;
+}
+
+h4{
+  margin-right: 100px;
+}
+
+.jugada{
+  width: 15%;
+  height: 100%;
+}
+
+.dadosTirados{
+  width: 70%;
+}
+

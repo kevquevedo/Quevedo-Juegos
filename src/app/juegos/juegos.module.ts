@@ -6,12 +6,16 @@ import { JuegoHomeComponent } from './juego-home/juego-home.component';
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './mayor-menor/mayor-menor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PreguntadosComponent } from './preguntados/preguntados.component';
+import { GeneralaObligadaComponent } from './generala-obligada/generala-obligada.component';
 
 @NgModule({
   declarations: [
     JuegoHomeComponent,
     AhorcadoComponent,
-    MayorMenorComponent
+    MayorMenorComponent,
+    PreguntadosComponent,
+    GeneralaObligadaComponent
   ],
   imports: [
     CommonModule,

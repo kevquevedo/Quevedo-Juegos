@@ -1,0 +1,55 @@
+<div class="loading" *ngIf="loading">
+  <img class="loader" src="../../assets/infinity.gif" alt="">
+</div>
+<main *ngIf="!loading" class="container bg-light vw-100">
+  <section class="row justify-content-center p-3 vw-75">
+    <div class="col text-center border-bottom fs-1 p-3 fw-bolder titulo">
+      Preguntas y Respuestas
+    </div>
+    <div *ngIf="preguntaElegida != undefined" >
+      <div class="fs-4 p-3 text-dark fw-semibold">
+        Puntaje: {{puntaje}}
+      </div>
+      <div class="p-3 bg-info cuerpo">
+        <div class="d-flex justify-content-center">
+          <img src="{{preguntaElegida.imagen}}" alt="imagen">
+        </div>
+        <div class="col text-center p-3">
+          <h3 class="fw-semibold fs-3">{{preguntaElegida.pregunta}}</h3>
+        </div>
+        <div class="opciones row justify-content-center">
+          <div class="opcion col-4 fw-bolder" (click)="elegirRespuesta(preguntaElegida.respuestas.opcion1)">
+            A.- {{preguntaElegida.respuestas.opcion1.respuesta}}
+          </div>
+          <div class="opcion col-4 fw-bolder" (click)="elegirRespuesta(preguntaElegida.respuestas.opcion2)">
+            B.- {{preguntaElegida.respuestas.opcion2.respuesta}}
+          </div>
+          <div class="opcion col-4 fw-bolder" (click)="elegirRespuesta(preguntaElegida.respuestas.opcion3)">
+            C.- {{preguntaElegida.respuestas.opcion3.respuesta}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="preguntaElegida == undefined" class="cuerpo d-flex align-items-center">
+      <div class="col text-center fs-4 p-3">
+        <button class="btn btn-info boton" (click)="elegirPreguntaInicial()">Iniciar Juego</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Modal Perdiste-->
+<div class="modal fade" id="mensajePerdisteModal" tabindex="-1" aria-labelledby="mensajePerdisteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-bg-danger">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mensajePerdisteModalLabel">Mensaje</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Perdiste! <br> Intentalo de nuevo!
+      </div>
+    </div>
+  </div>
+</div>

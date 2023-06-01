@@ -4,26 +4,59 @@
 <main *ngIf="!loading">
   <h1>Juegos</h1>
   <div class="seleccionJuegos">
-    <div class="card">
-      <img src="../../../assets/ahorcado-canva.png" class="card-img-top" alt="Image">
-      <div class="card-body">
-        <h5 class="card-title">Ahorcado</h5>
-        <p class="card-text">
-          En este juego, se brindará una palabra y el jugador intenta adivinarla sugiriendo letras dentro de un cierto número de intentos. La palabra a adivinar está representada por una fila de guiones que representan cada letra de la palabra, y cada intento incorrecto agrega un nuevo elemento al dibujo del verdugo. El juego continúa hasta que el jugador que adivina acerta la palabra en cuestión, o hasta que el verdugo está completamente dibujado, lo que resulta en una pérdida para el jugador.
-        </p>
+    <div class="row row-cols-1 row-cols-md-2 g-4" >
+      <div class="col">
+        <div class="card">
+          <img src="../../../assets/ahorcado-canva.png" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">Ahorcado</h5>
+            <p class="card-text">
+              En este juego, se brindará una palabra y el jugador intenta adivinarla sugiriendo letras dentro de un cierto número de intentos. La palabra a adivinar está representada por una fila de guiones que representan cada letra de la palabra, y cada intento incorrecto agrega un nuevo elemento al dibujo del verdugo. El juego continúa hasta que el jugador que adivina acerta la palabra en cuestión, o hasta que el verdugo está completamente dibujado, lo que resulta en una pérdida para el jugador.
+            </p>
+          </div>
+          <a routerLink="ahorcado" class="btn btn-success">Jugar</a>
+        </div>
       </div>
-      <a routerLink="ahorcado" class="btn btn-success">Jugar</a>
-    </div>
-    <div class="card">
-      <img src="../../../assets/Mayor-Menor-igual.png" class="card-img-top" alt="Image">
-      <div class="card-body">
-        <h5 class="card-title">Mayor, menor o igual</h5>
-        <p class="card-text">
-          El juego de "mayor o menor" es un juego de cartas simple que se puede jugar con una sola baraja de cartas. En este juego, el jugador voltea una carta de una pila central y adivina si la próxima carta tendrá un valor mayor o menor. Si la suposición es correcta, el jugador continúa adivinando, y si la suposición es incorrecta, perderá el juego. Cada acierto valdrá 1 punto.
-        </p>
+      <div class="col">
+        <div class="card">
+          <img src="../../../assets/Mayor-Menor-igual.png" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">Mayor, menor o igual</h5>
+            <p class="card-text">
+              El juego de "mayor o menor" es un juego de cartas simple que se puede jugar con una sola baraja de cartas. En este juego, el jugador voltea una carta de una pila central y adivina si la próxima carta tendrá un valor mayor o menor. Si la suposición es correcta, el jugador continúa adivinando, y si la suposición es incorrecta, perderá el juego. Cada acierto valdrá 1 punto.
+            </p>
+          </div>
+          <a routerLink="mayormenor" class="btn btn-success">Jugar</a>
+        </div>
       </div>
-      <a routerLink="mayormenor" class="btn btn-success">Jugar</a>
+      <div class="col">
+        <div class="card">
+          <img src="../../../assets/Preguntas y respuestas.gif" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">Preguntas y Respuestas</h5>
+            <p class="card-text">
+              Los juegos de preguntas y respuestas son una forma divertida y educativa de poner a prueba tus conocimientos y aprender cosas nuevas.
+              En este juego, se brindará una pregunta al jugador y cuatro opciones posibles, de las cuales solo una es correcta.
+              Cada pregunta correcta suma 1 punto al score del jugador. Si el jugador no contesta correctamente habrá perdido.
+            </p>
+          </div>
+          <a routerLink="preguntados" class="btn btn-success">Jugar</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="../../../assets/Generala Obligada.png" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">Generala Obligada</h5>
+            <p class="card-text">
+              La Generala Obligada es un juego de azar. Se juega con 5 dados.<br>
+              Cada jugador realiza un tiro para cada jugada (las cuales se explican a detalle en la sección "Quien Soy"), y se determina que puntaje obtiene sobre cada una de ellas. <br>
+              El judagor que mas puntaje obtiene es el que gana.
+            </p>
+          </div>
+          <a routerLink="generala" class="btn btn-success">Jugar</a>
+        </div>
+      </div>
     </div>
   </div>
-
 </main>
